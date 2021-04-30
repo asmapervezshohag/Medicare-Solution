@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test" parallel="tests" thread-count="6">
+	<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="Website" value="https://www.facebook.com"></parameter>
+	<listeners>
+	<listener class-name="praticePackageforTestNG.liPractice">
+	</listener>
+	</listeners>
+	<!--  <groups>
+		<run>
+			<include name="Regression" />
+			<include name="System" />
+			<include name="Sanity" />
+		</run>
+	</groups>-->
+
+	<test thread-count="5" name="Adhoc Test">
+		<classes>
+			<!--  <class
+				name="com.peolentech.automationtrainingcourse.SignHomePage" />-->
+			<!--<class name="TestNGMultipleClassRunPractice.PracticeDay1"/>-->
+			<class name="com.peolentech.automationtrainingcourse.PropertyPractice"/>
+			<!-- <class name="praticePackageforTestNG.PracticeDay2" />-->
+			<!-- <class
+				name="com.peolentech.automationtrainingcourse.GroupPracticeInTestNG" />-->
+		</classes>
+	</test>
+	<!-- <test thread-count="5" name="Smoke test"> <parameter name="browser" 
+		value = "Chrome"></parameter> <classes> <class name="com.peolentech.automationtrainingcourse.SignHomePage"/> 
+		<class name="praticePackageforTestNG.PracticeDay1"/> <class name="praticePackageforTestNG.PracticeDay2"/> 
+		</classes> </test> <test thread-count="5" name="system Test"> <parameter 
+		name="browser" value = "Edge"></parameter> <classes> <class name="com.peolentech.automationtrainingcourse.SignHomePage"/> 
+		<class name="praticePackageforTestNG.PracticeDay1"/> <class name="praticePackageforTestNG.PracticeDay2"/> 
+		</classes> </test> -->
+</suite> 
